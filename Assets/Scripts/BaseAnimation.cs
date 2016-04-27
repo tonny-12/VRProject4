@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class KidController : MonoBehaviour {
+public class BaseAnimation : MonoBehaviour {
 
 	public bool isAnimated;
+	public float orientRate;
 
 	private Animator myAnimator;
 	private float rotationSpeed;
@@ -21,17 +22,16 @@ public class KidController : MonoBehaviour {
 	void Update () {
 
 		if (!isAnimated){
-			SmoothRotate ();	
+			SmoothRotate ();
 		}
-			
 		//Rotate();
 
 	}
-
+		
 
 	void SmoothRotate() {
 
-		myAnimator.SetFloat ("walkspeed", 0.25f);
+		//myAnimator.SetFloat ("walkspeed", orientRate);
 
 		Vector3 los = Camera.main.transform.position - transform.position;
 		los = new Vector3(los.x, 0.0f, los.z);
@@ -39,7 +39,7 @@ public class KidController : MonoBehaviour {
 		transform.rotation = Quaternion.RotateTowards (transform.rotation, losRotation, rotationSpeed * Time.deltaTime);
 
 		if (transform.rotation != losRotation) {
-			myAnimator.SetFloat ("walkspeed", 0.5f);
+			myAnimator.SetFloat ("walkspeed", orientRate);
 		} else {
 			myAnimator.SetFloat ("walkspeed", 0.0f);
 		}
