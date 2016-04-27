@@ -111,8 +111,7 @@ public class CardboardHead : MonoBehaviour {
       if (target == null) {
         transform.localRotation = rot;
       } else {
-        //transform.rotation = target.rotation * rot;
-        target.localRotation = rot;
+        transform.rotation = target.rotation * rot;
       }
     }
 
