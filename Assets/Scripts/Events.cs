@@ -177,6 +177,28 @@ public class Events : MonoBehaviour {
 			book.SetActive (false);
 		}
 
+		//grown kid entry
+
+		if (givenCake && givenSnack && kid.GetComponent<BaseAnimation> ().isAnimated == false) {
+			obeseTeen.SetActive (true);
+			obeseTeen.GetComponent<EntryAnimation> ().enabled = !obeseTeen.GetComponent<EntryAnimation>().enabled;
+		}
+
+		if (givenCake && givenBook && kid.GetComponent<BaseAnimation> ().isAnimated == false) {
+			middleTeen.SetActive (true);
+			middleTeen.GetComponent<EntryAnimation> ().enabled = !middleTeen.GetComponent<EntryAnimation>().enabled;
+		}
+
+		if (givenCar && givenBook && kid.GetComponent<BaseAnimation> ().isAnimated == false) {
+			athleticTeen.SetActive (true);
+			athleticTeen.GetComponent<EntryAnimation> ().enabled = !athleticTeen.GetComponent<EntryAnimation>().enabled;
+		}
+
+		if (givenCar && givenSnack && kid.GetComponent<BaseAnimation> ().isAnimated == false) {
+			middleTeen.SetActive (true);
+			middleTeen.GetComponent<EntryAnimation> ().enabled = !middleTeen.GetComponent<EntryAnimation>().enabled;
+		}
+
 
 
 	}
