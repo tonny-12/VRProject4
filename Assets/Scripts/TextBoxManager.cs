@@ -63,16 +63,16 @@ public class TextBoxManager : MonoBehaviour {
 			endAtLine = 1;
 			EnableTextBox ();
 		} else if (other.gameObject.name == "Obese Teen Container") {
-			currentLine = 6;
-			endAtLine = 7;
+			currentLine = 9;
+			endAtLine = 10;
 			EnableTextBox ();
 		} else if (other.gameObject.name == "Middleweight Container 1") {
-			currentLine = 8;
-			endAtLine = 9;
+			currentLine = 13;
+			endAtLine = 14;
 			EnableTextBox ();
 		} else if (other.gameObject.name == "Athletic Teen Container") {
-			currentLine = 10;
-			endAtLine = 11;
+			currentLine = 17;
+			endAtLine = 18;
 			EnableTextBox ();
 		}
 	}
