@@ -24,7 +24,7 @@ public class Events : MonoBehaviour {
 	private Transform obeseTeenTrans;
 	private Transform athleticTeenTrans;
 	private Transform middleTeenTrans;
-
+    
 	public bool givenCake;
 	public bool givenCar;
 	public bool kidExited;
@@ -33,14 +33,16 @@ public class Events : MonoBehaviour {
 	public bool givenBook;
 	public bool givenSnack;
 
-
+    
+    TextBoxManager textScript;
 
 
 	// Use this for initialization
 	void Start () {
 
 		givenCake = false;
-
+        
+        textScript = GameObject.Find("FPSController").GetComponent<TextBoxManager>();
 		kidTrans = kid.GetComponent<Transform> ();
 		cakeTrans = cake.GetComponent<Transform> ();
 		carTrans = car.GetComponent<Transform> ();
@@ -63,19 +65,29 @@ public class Events : MonoBehaviour {
 		Vector3 cakelos = kidTrans.position - cakeTrans.position;
 		cakelos = new Vector3 (cakelos.x, 0.0f, cakelos.z);
 
-		if (cakelos.magnitude < 0.4f){
+        if((givenCake || givenCar ) && !textScript.isActive)
+        {
+
+            kid.GetComponent<EntryAnimation>().enabled = false; // !kid.GetComponent<EntryAnimation>().enabled;
+            kid.GetComponent<KitchenAnimation>().enabled = true; // !kid.GetComponent<KitchenAnimation>().enabled;
+            snack.SetActive(true);
+            book.SetActive(true);
+            textScript.waiting = true;
+
+        }
+
+        if (cakelos.magnitude < 0.4f){
 			if (givenCake == false) {
 				cake.SetActive (false);
+                car.GetComponent<BoxCollider>().enabled = false;
+                textScript.currentLine = 7;
+                textScript.endAtLine = 10;
+                textScript.EnableTextBox();
 
-				car.SetActive (false);
-
-				kid.GetComponent<EntryAnimation> ().enabled = !kid.GetComponent<EntryAnimation> ().enabled;
-				kid.GetComponent<KitchenAnimation> ().enabled = !kid.GetComponent<KitchenAnimation> ().enabled;
+                car.GetComponent<BoxCollider>().enabled = false;
 
 				givenCake = true;
 
-				snack.SetActive (true);
-				book.SetActive (true);
 			}
 		}
 
@@ -83,19 +95,18 @@ public class Events : MonoBehaviour {
 		carlos = new Vector3 (carlos.x, 0.0f, carlos.z);
 
 		if (carlos.magnitude < 0.4f){
-			if (givenCar == false) {
-				car.SetActive (false);
+			if (givenCar == false)
+            {
+                car.SetActive(false);
+                cake.GetComponent<BoxCollider>().enabled = false;
+                textScript.currentLine = 3;
+                textScript.endAtLine = 6;
+                textScript.EnableTextBox();
 
-				cake.SetActive (false);
+                car.GetComponent<BoxCollider>().enabled = false;
 
-				kid.GetComponent<EntryAnimation> ().enabled = !kid.GetComponent<EntryAnimation> ().enabled;
-				kid.GetComponent<KitchenAnimation> ().enabled = !kid.GetComponent<KitchenAnimation> ().enabled;
-
-				givenCar = true;
-
-				snack.SetActive (true);
-				book.SetActive (true);
-			}
+                givenCake = true;
+            }
 		}
 
 		//snack

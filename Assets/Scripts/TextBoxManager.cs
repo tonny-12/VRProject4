@@ -20,6 +20,8 @@ public class TextBoxManager : MonoBehaviour {
 	private bool cancelTyping = false;
 	public float typeSpeed;
 
+    bool beginning = true;
+
 	// Use this for initialization
 	void Start () {
 		player = FindObjectOfType<FirstPersonController> ();
@@ -45,9 +47,11 @@ public class TextBoxManager : MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.Return) || Input.GetButtonDown("PS4_Circle")) {
 			if (!isTyping) {
 				currentLine += 1;
-				if (currentLine > endAtLine) {
+                print(currentLine);
+                if (currentLine > endAtLine) {
 					DisableTextBox ();
 				} else {
+                    print("ELSE");
 					StartCoroutine (TextScroll (textLines [currentLine]));
 				}	
 			} else if (isTyping && !cancelTyping) {
@@ -58,7 +62,8 @@ public class TextBoxManager : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider other) {
-		if (other.gameObject.name == "Kid Container") {
+		if (other.gameObject.name == "Kid Container" && other.gameObject.GetComponent<BaseAnimation>().isAnimated == false && beginning) {
+            beginning = false;
 			currentLine = 0;
 			endAtLine = 1;
 			EnableTextBox ();
@@ -78,6 +83,7 @@ public class TextBoxManager : MonoBehaviour {
 	}
 
 	private IEnumerator TextScroll (string lineOfText) {
+        print("COUU");
 		int letter = 0;
 		theText.text = "";
 		isTyping = true;
