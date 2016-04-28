@@ -33,6 +33,8 @@ public class Events : MonoBehaviour {
 	public bool givenBook;
 	public bool givenSnack;
 
+	public bool teenEntered;
+
 
 
 
@@ -40,6 +42,7 @@ public class Events : MonoBehaviour {
 	void Start () {
 
 		givenCake = false;
+		teenEntered = false;
 
 		kidTrans = kid.GetComponent<Transform> ();
 		cakeTrans = cake.GetComponent<Transform> ();
@@ -178,23 +181,26 @@ public class Events : MonoBehaviour {
 		}
 
 		//grown kid entry
-
-		if (givenCake && givenSnack && kid.GetComponent<BaseAnimation> ().isAnimated == false) {
+		if (givenCake && givenSnack && kid.GetComponent<BaseAnimation> ().isAnimated == false && teenEntered == false) {
+			teenEntered = true;
 			obeseTeen.SetActive (true);
 			obeseTeen.GetComponent<EntryAnimation> ().enabled = !obeseTeen.GetComponent<EntryAnimation>().enabled;
 		}
 
-		if (givenCake && givenBook && kid.GetComponent<BaseAnimation> ().isAnimated == false) {
+		if (givenCake && givenBook && kid.GetComponent<BaseAnimation> ().isAnimated == false && teenEntered == false) {
+			teenEntered = true;
 			middleTeen.SetActive (true);
 			middleTeen.GetComponent<EntryAnimation> ().enabled = !middleTeen.GetComponent<EntryAnimation>().enabled;
 		}
 
-		if (givenCar && givenBook && kid.GetComponent<BaseAnimation> ().isAnimated == false) {
+		if (givenCar && givenBook && kid.GetComponent<BaseAnimation> ().isAnimated == false && teenEntered == false) {
+			teenEntered = true;
 			athleticTeen.SetActive (true);
 			athleticTeen.GetComponent<EntryAnimation> ().enabled = !athleticTeen.GetComponent<EntryAnimation>().enabled;
 		}
 
-		if (givenCar && givenSnack && kid.GetComponent<BaseAnimation> ().isAnimated == false) {
+		if (givenCar && givenSnack && kid.GetComponent<BaseAnimation> ().isAnimated == false && teenEntered == false) {
+			teenEntered = true;
 			middleTeen.SetActive (true);
 			middleTeen.GetComponent<EntryAnimation> ().enabled = !middleTeen.GetComponent<EntryAnimation>().enabled;
 		}
