@@ -35,6 +35,9 @@ public class Events : MonoBehaviour {
 
 	public bool teenEntered;
 	public bool teenGo;
+	public bool obeseGo;
+	public bool middleGo;
+	public bool athleticGo;
 
 
 
@@ -45,6 +48,9 @@ public class Events : MonoBehaviour {
 		givenCake = false;
 		teenEntered = false;
 		teenGo = false;
+		obeseGo = false;
+		middleGo = false;
+		athleticGo = false;
 
 		kidTrans = kid.GetComponent<Transform> ();
 		cakeTrans = cake.GetComponent<Transform> ();
@@ -192,40 +198,37 @@ public class Events : MonoBehaviour {
 		if (givenCake && givenBook && kid.GetComponent<BaseAnimation> ().isAnimated == false && teenEntered == false) {
 			teenEntered = true;
 			middleTeen.SetActive (true);
-			middleTeen.GetComponent<EntryAnimation> ().enabled = !middleTeen.GetComponent<EntryAnimation>().enabled;
 		}
 
 		if (givenCar && givenBook && kid.GetComponent<BaseAnimation> ().isAnimated == false && teenEntered == false) {
 			teenEntered = true;
 			athleticTeen.SetActive (true);
-
 		}
 
 		if (givenCar && givenSnack && kid.GetComponent<BaseAnimation> ().isAnimated == false && teenEntered == false) {
 			teenEntered = true;
 			middleTeen.SetActive (true);
-
 		}
 
 		Vector3 obeselos = kidTrans.position - obeseTeenTrans.position;
 		obeselos = new Vector3 (obeselos.x, 0.0f, obeselos.z);
-		if (obeselos.magnitude < 2.0f && teenGo == false) {
+		if (obeselos.magnitude < 2.0f && obeseGo == false) {
 			obeseTeen.GetComponent<EntryAnimation> ().enabled = !obeseTeen.GetComponent<EntryAnimation>().enabled;
-			teenGo = true;
+			obeseGo = true;
 		}
 
 		Vector3 middlelos = kidTrans.position - middleTeenTrans.position;
 		middlelos  = new Vector3 (middlelos.x, 0.0f, middlelos.z);
-		if (middlelos.magnitude < 2.0f && teenGo == false) {
+		if (middlelos.magnitude < 2.0f && middleGo == false) {
 			middleTeen.GetComponent<EntryAnimation> ().enabled = !middleTeen.GetComponent<EntryAnimation>().enabled;
-			teenGo = true;
+			middleGo = true;
 		}
 
 		Vector3 athleticlos = kidTrans.position - athleticTeenTrans.position;
 		athleticlos = new Vector3 (athleticlos.x, 0.0f, athleticlos.z);
-		if (athleticlos.magnitude < 2.0f && teenGo == false) {
+		if (athleticlos.magnitude < 2.0f && athleticGo == false) {
 			athleticTeen.GetComponent<EntryAnimation> ().enabled = !athleticTeen.GetComponent<EntryAnimation>().enabled;
-			teenGo = true;
+			athleticGo = true;
 		}
 
 
