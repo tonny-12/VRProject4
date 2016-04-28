@@ -25,9 +25,22 @@ public class Events : MonoBehaviour {
 	private Transform athleticTeenTrans;
 	private Transform middleTeenTrans;
 
+	public bool givenCake;
+	public bool givenCar;
+	public bool kidExited;
+	public bool inKitchen;
+
+	public bool givenBook;
+	public bool givenSnack;
+
+
+
 
 	// Use this for initialization
 	void Start () {
+
+		givenCake = false;
+
 		kidTrans = kid.GetComponent<Transform> ();
 		cakeTrans = cake.GetComponent<Transform> ();
 		carTrans = car.GetComponent<Transform> ();
@@ -51,17 +64,53 @@ public class Events : MonoBehaviour {
 		cakelos = new Vector3 (cakelos.x, 0.0f, cakelos.z);
 
 		if (cakelos.magnitude < 0.4f){
-			cake.SetActive (false);
+			if (givenCake == false) {
+				cake.SetActive (false);
+
+				kid.GetComponent<EntryAnimation> ().enabled = !kid.GetComponent<EntryAnimation> ().enabled;
+				kid.GetComponent<KitchenAnimation> ().enabled = !kid.GetComponent<KitchenAnimation> ().enabled;
+
+				givenCake = true;
+
+				snack.SetActive (true);
+				book.SetActive (true);
+			}
 		}
 
 		Vector3 carlos = kidTrans.position - carTrans.position;
 		carlos = new Vector3 (carlos.x, 0.0f, carlos.z);
 
 		if (carlos.magnitude < 0.4f){
-			car.SetActive (false);
+			if (givenCar == false) {
+				car.SetActive (false);
+
+				kid.GetComponent<EntryAnimation> ().enabled = !kid.GetComponent<EntryAnimation> ().enabled;
+				kid.GetComponent<KitchenAnimation> ().enabled = !kid.GetComponent<KitchenAnimation> ().enabled;
+
+				givenCar = true;
+
+				snack.SetActive (true);
+				book.SetActive (true);
+			}
 		}
 
 		//snack
+		Vector3 snacklos = kidTrans.position - snackTrans.position;
+		snacklos = new Vector3 (snacklos.x, 0.0f, snacklos.z);
+
+		if (snacklos.magnitude < 0.4f){
+			if (givenSnack == false) {
+				snack.SetActive (false);
+
+
+				kid.GetComponent<KitchenAnimation> ().enabled = !kid.GetComponent<KitchenAnimation> ().enabled;
+				kid.GetComponent<ExitAnimation> ().enabled = !kid.GetComponent<ExitAnimation> ().enabled;
+
+				givenSnack = true;
+
+			}
+		}
+
 		Vector3 obeseSnacklos = obeseTeenTrans.position - snackTrans.position;
 		obeseSnacklos = new Vector3 (obeseSnacklos.x, 0.0f, obeseSnacklos.z);
 
@@ -84,6 +133,21 @@ public class Events : MonoBehaviour {
 		}
 
 		//book
+		Vector3 booklos = kidTrans.position - bookTrans.position;
+		booklos = new Vector3 (booklos.x, 0.0f, booklos.z);
+
+		if (booklos.magnitude < 0.4f){
+			if (givenBook == false) {
+				book.SetActive (false);
+
+				kid.GetComponent<KitchenAnimation> ().enabled = !kid.GetComponent<KitchenAnimation> ().enabled;
+				kid.GetComponent<ExitAnimation> ().enabled = !kid.GetComponent<ExitAnimation> ().enabled;
+
+				givenBook = true;
+
+			}
+		}
+
 		Vector3 obeseBooklos = obeseTeenTrans.position - bookTrans.position;
 		obeseBooklos = new Vector3 (obeseBooklos.x, 0.0f, obeseBooklos.z);
 
