@@ -49,6 +49,7 @@ public class OneSelectable : MonoBehaviour,
         if (Input.GetKeyDown("z") && selected)
         {
             //
+            hoverText.text = "";
             snack.SetActive(true);
             book.SetActive(true);
             gameObject.SetActive(false);

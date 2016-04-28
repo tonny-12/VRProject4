@@ -57,6 +57,7 @@ public class SelectableScript : MonoBehaviour,
         if (Input.GetKeyDown("z") && selected)
         {
             //
+            hoverText.text = "";
             gameObject.SetActive(false);
             if (FoodReward)
             {   //food was chosen
