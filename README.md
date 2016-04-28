@@ -1,19 +1,30 @@
-# Project4
+# Project4: The Rewards of Parenting
+
+### Source Code and APK
+[Android APK and Source Code]()
+
+### Authors
+[Virada Long](https://github.com/ViradaLong)
+[Jesse Trinity](https://github.com/jtrinity)
+[Tonny Xie](https://github.com/tonny-12)
+
+### YouTube Video
+[Demo]()
+
+### Website
+http
+
+### Social Relevance
+
+### Scientific Data
+
+### Team Responsibilities
+
+## Assests & Resources
 
 <!--
 # VR-Project3: Mount Everest
 In this project, collective data on Mount Everest is shown to the users in virtual reality.
-
-### Source Code and APK
-[Android APK and Source Code](https://drive.google.com/file/d/0B4r_loZFJqdya1o0b0RsVDBydXc/view?usp=sharing)
-
-### Authors
-[Fai Kwok](https://github.com/cfkwok)  
-[Timothy Wagner](https://github.com/Atonement100)  
-[Tonny Xie](https://github.com/tonny-12)  
-
-### YouTube Video
-[Demo](https://youtu.be/C4dzIEDLk_Y)
 
 ### Website
 http://cfkwok.github.io/VR-Project3
