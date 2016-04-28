@@ -14,6 +14,7 @@ public class TextBoxManager : MonoBehaviour {
 	public bool isActive;
 	public bool stopPlayerMovement;
 	public FirstPersonController player;
+	public SelectableScript choice1;
 
 	private bool isTyping = false;
 	private bool cancelTyping = false;
@@ -53,7 +54,7 @@ public class TextBoxManager : MonoBehaviour {
 				cancelTyping = true;
 			}
 		}
-		if 
+
 	}
 
 	void OnTriggerEnter(Collider other) {
