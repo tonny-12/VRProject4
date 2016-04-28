@@ -4,8 +4,8 @@ using System.Collections;
 //Attach this script to a character to have it travel between
 //a set of waypoints. waypoints is a gameobject that contains
 //empty waypoint gameobjects, placed at the desired locations.
-public class WaypointAnimation : MonoBehaviour {
-	
+public class ExitAnimation : MonoBehaviour {
+
 
 	public GameObject waypoints;
 
@@ -36,12 +36,12 @@ public class WaypointAnimation : MonoBehaviour {
 		Debug.Log (waypointList[0].position.ToString ());
 
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 		if(targetIndex < waypointList.Length){
 			currentTarget = waypointList [targetIndex];
-			
+
 			Vector3 toPosition = currentTarget.position;
 
 			Vector3 los = toPosition - transform.position;
@@ -58,7 +58,7 @@ public class WaypointAnimation : MonoBehaviour {
 			myAnimator.SetFloat ("walkspeed", 0.0f);
 			gameObject.GetComponent<BaseAnimation> ().isAnimated = false;
 		}
-			
+
 	}
 
 	void SmoothRotate(Vector3 toPosition) {
