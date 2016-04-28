@@ -70,64 +70,7 @@ public class Events : MonoBehaviour {
 		//float dist = Vector3.Distance (kidTrans.position, cakeTrans.position);
 
 		//Debug.Log (dist.ToString ());
-        if(resultScene)
-        {
 
-            //grown kid entry
-            if (givenCake && givenSnack && kid.GetComponent<BaseAnimation>().isAnimated == false && teenEntered == false)
-            {
-                teenEntered = true;
-                obeseTeen.SetActive(true);
-
-            }
-
-            if (givenCake && givenBook && kid.GetComponent<BaseAnimation>().isAnimated == false && teenEntered == false)
-            {
-                teenEntered = true;
-                middleTeen.SetActive(true);
-                middleTeen.GetComponent<EntryAnimation>().enabled = !middleTeen.GetComponent<EntryAnimation>().enabled;
-            }
-
-            if (givenCar && givenBook && kid.GetComponent<BaseAnimation>().isAnimated == false && teenEntered == false)
-            {
-                teenEntered = true;
-                athleticTeen.SetActive(true);
-
-            }
-
-            if (givenCar && givenSnack && kid.GetComponent<BaseAnimation>().isAnimated == false && teenEntered == false)
-            {
-                teenEntered = true;
-                middleTeen.SetActive(true);
-
-            }
-        }
-
-        if((givenCake || givenCar ) && !textScript.isActive)
-        {
-
-            kid.GetComponent<EntryAnimation>().enabled = false; // !kid.GetComponent<EntryAnimation>().enabled;
-            kid.GetComponent<KitchenAnimation>().enabled = true; // !kid.GetComponent<KitchenAnimation>().enabled;
-            snack.SetActive(true);
-            book.SetActive(true);
-            textScript.waiting = true;
-
-        }
-        if ((givenSnack || givenBook) && !textScript.isActive)
-        {
-
-            kid.GetComponent<KitchenAnimation>().enabled = false; //!kid.GetComponent<KitchenAnimation>().enabled;
-            kid.GetComponent<ExitAnimation>().enabled = true; //!kid.GetComponent<ExitAnimation>().enabled;
-            //transition
-            trans.SetActive(true);
-            if (Input.anyKeyDown)
-            {
-                trans.SetActive(false);
-                resultScene = true;
-            }
-         
-
-        }
 
 
         Vector3 cakelos = kidTrans.position - cakeTrans.position;
@@ -206,6 +149,33 @@ public class Events : MonoBehaviour {
             }
         }
 
+
+        if ((givenCake || givenCar) && !textScript.isActive)
+        {
+
+            kid.GetComponent<EntryAnimation>().enabled = false; // !kid.GetComponent<EntryAnimation>().enabled;
+            kid.GetComponent<KitchenAnimation>().enabled = true; // !kid.GetComponent<KitchenAnimation>().enabled;
+            snack.SetActive(true);
+            book.SetActive(true);
+            textScript.waiting = true;
+
+        }
+        if ((givenSnack || givenBook) && !textScript.isActive)
+        {
+
+            kid.GetComponent<KitchenAnimation>().enabled = false; //!kid.GetComponent<KitchenAnimation>().enabled;
+            kid.GetComponent<ExitAnimation>().enabled = true; //!kid.GetComponent<ExitAnimation>().enabled;
+            //transition
+            trans.SetActive(true);
+            if (Input.anyKeyDown)
+            {
+                trans.SetActive(false);
+                resultScene = true;
+            }
+
+
+        }
+
         Vector3 obeseSnacklos = obeseTeenTrans.position - snackTrans.position;
 		obeseSnacklos = new Vector3 (obeseSnacklos.x, 0.0f, obeseSnacklos.z);
 
@@ -275,5 +245,38 @@ public class Events : MonoBehaviour {
             teenGo = true;
         }
 
+
+        if (resultScene)
+        {
+
+            //grown kid entry
+            if (givenCake && givenSnack && kid.GetComponent<BaseAnimation>().isAnimated == false && teenEntered == false)
+            {
+                teenEntered = true;
+                obeseTeen.SetActive(true);
+
+            }
+
+            if (givenCake && givenBook && kid.GetComponent<BaseAnimation>().isAnimated == false && teenEntered == false)
+            {
+                teenEntered = true;
+                middleTeen.SetActive(true);
+                middleTeen.GetComponent<EntryAnimation>().enabled = !middleTeen.GetComponent<EntryAnimation>().enabled;
+            }
+
+            if (givenCar && givenBook && kid.GetComponent<BaseAnimation>().isAnimated == false && teenEntered == false)
+            {
+                teenEntered = true;
+                athleticTeen.SetActive(true);
+
+            }
+
+            if (givenCar && givenSnack && kid.GetComponent<BaseAnimation>().isAnimated == false && teenEntered == false)
+            {
+                teenEntered = true;
+                middleTeen.SetActive(true);
+
+            }
+        }
     }
 }
