@@ -4,23 +4,27 @@
 [Android APK and Source Code]()
 
 ### Authors
-[Virada Long](https://github.com/ViradaLong)
-[Jesse Trinity](https://github.com/jtrinity)
-[Tonny Xie](https://github.com/tonny-12)
+[Virada Long](https://github.com/ViradaLong)  
+[Jesse Trinity](https://github.com/jtrinity)  
+[Tonny Xie](https://github.com/tonny-12)  
 
 ### YouTube Video
-[Demo]()
+[Demo]()  
 
 ### Website
-http
+http  
 
 ### Social Relevance
+  
 
 ### Scientific Data
+  
 
 ### Team Responsibilities
+  
 
-## Assests & Resources
+### Assests & Resources
+  
 
 <!--
 # VR-Project3: Mount Everest
