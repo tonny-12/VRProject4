@@ -63,28 +63,27 @@ public class TextBoxManager : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider other) {
-        if ((other.gameObject.name == "Kid Container") && !other.gameObject.GetComponent<BaseAnimation>().isAnimated && beginning) {
-            beginning = false;
-            currentLine = 0;
-            endAtLine = 2;
-            EnableTextBox();
-        } else if ((other.gameObject.name == "Kid Container") && !other.gameObject.GetComponent<BaseAnimation>().isAnimated && waiting)
-        {
-            waiting = false;
-            currentLine = 11;
-            endAtLine = 13;
-            EnableTextBox();
-        } else if (other.gameObject.name == "Obese Teen Container") {
+		if ((other.gameObject.name == "Kid Container") && (!other.gameObject.GetComponent<BaseAnimation>().isAnimated) && (beginning)) {
+			beginning = false;
+			currentLine = 0;
+			endAtLine = 2;
+			EnableTextBox();
+		} else if ((other.gameObject.name == "Kid Container") && (!other.gameObject.GetComponent<BaseAnimation>().isAnimated) && (waiting)) {
+			waiting = false;
+			currentLine = 11;
+			endAtLine = 13;
+			EnableTextBox();
+		} else if (other.gameObject.name == "Obese Teen Container") {
+			currentLine = 22;
+			endAtLine = 22;
+			EnableTextBox ();
+		} else if (other.gameObject.name == "Middleweight Container 1") {
 			currentLine = 24;
 			endAtLine = 25;
 			EnableTextBox ();
-		} else if (other.gameObject.name == "Middleweight Container 1") {
-			currentLine = 21;
-			endAtLine = 23;
-			EnableTextBox ();
 		} else if (other.gameObject.name == "Athletic Teen Container") {
-			currentLine = 18;
-			endAtLine = 20;
+			currentLine = 27;
+			endAtLine = 28;
 			EnableTextBox ();
 		}
 	}
