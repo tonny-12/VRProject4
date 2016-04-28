@@ -4,7 +4,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using System;
 
-public class SelectableScript : MonoBehaviour, ICardboardPointer
+public class SelectableScript : MonoBehaviour
 {
 
     Component halo;
@@ -73,39 +73,4 @@ public class SelectableScript : MonoBehaviour, ICardboardPointer
         }
 	
 	}
-
-    public void OnGazeEnabled()
-    {
-        //
-    }
-
-    public void OnGazeDisabled()
-    {
-        //
-    }
-
-    public void OnGazeStart(Camera camera, GameObject targetObject, Vector3 intersectionPosition)
-    {
-        hoverOn();
-    }
-
-    public void OnGazeStay(Camera camera, GameObject targetObject, Vector3 intersectionPosition)
-    {
-        throw new NotImplementedException();
-    }
-
-    public void OnGazeExit(Camera camera, GameObject targetObject)
-    {
-        hoverOff();
-    }
-
-    public void OnGazeTriggerStart(Camera camera)
-    {
-        throw new NotImplementedException();
-    }
-
-    public void OnGazeTriggerEnd(Camera camera)
-    {
-        throw new NotImplementedException();
-    }
 }
