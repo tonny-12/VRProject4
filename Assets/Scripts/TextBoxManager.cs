@@ -42,7 +42,7 @@ public class TextBoxManager : MonoBehaviour {
 			return;
 		}
 		//theText.text = textLines [currentLine];
-		if (Input.GetKeyDown (KeyCode.Return)) {
+		if (Input.GetKeyDown (KeyCode.Return) || Input.GetButtonDown("PS4_Circle")) {
 			if (!isTyping) {
 				currentLine += 1;
 				if (currentLine > endAtLine) {
