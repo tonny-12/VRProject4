@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class SelectableScript : MonoBehaviour,
+public class TwoSelectable : MonoBehaviour,
     IPointerEnterHandler, IPointerExitHandler
 {
 
@@ -11,35 +11,35 @@ public class SelectableScript : MonoBehaviour,
     public bool FoodReward;
     bool selected = false;
     Text hoverText;
-    GameObject makeSnack;
-    GameObject cake;
-    GameObject car;
+    GameObject snack;
+    GameObject book;
     BaseAnimation anim;
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
         halo = GetComponent("Halo");
         //
         hoverText = GameObject.FindGameObjectWithTag("EditorOnly").GetComponent<Text>();
         hoverText.text = "";
-        makeSnack = GameObject.Find("/MakeSnack");
-        cake = GameObject.Find("/Cake");
-        car = GameObject.Find("/Car");
+        snack = GameObject.Find("/Snack");
+        book = GameObject.Find("/Book");
         anim = GameObject.Find("/Kid Container").GetComponent<BaseAnimation>();
+
     }
 
 
-        public void OnPointerEnter(PointerEventData eventData)
+    public void OnPointerEnter(PointerEventData eventData)
     {
         if (anim.isAnimated) return;    //don't activate
         halo.GetType().GetProperty("enabled").SetValue(halo, true, null); //SetActive(true);
         selected = true;
         if (FoodReward)
         {   //food was chosen
-            hoverText.text = "Push x to reward with cake";
+            hoverText.text = "Make child eat snack";
         }
         else
         {   //nonfood was chosen
-            hoverText.text = "Push x to reward with car";
+            hoverText.text = "Have child read instead";
         }
     }
 
@@ -50,26 +50,27 @@ public class SelectableScript : MonoBehaviour,
         hoverText.text = "";
     }
 
-    
-	
-	// Update is called once per frame
-	void Update () {
+
+
+    // Update is called once per frame
+    void Update()
+    {
         if (Input.GetKeyDown("z") && selected)
         {
             //
             gameObject.SetActive(false);
             if (FoodReward)
             {   //food was chosen
-                car.GetComponent<BoxCollider>().enabled = false;
-                print("FOOD");  
+                print("SNACK");
+                book.GetComponent<BoxCollider>().enabled = false;
             }
             else
             {   //nonfood was chosen
-                cake.GetComponent<BoxCollider>().enabled = false;
-                print("NON");
+                print("BOOK");
+                snack.GetComponent<BoxCollider>().enabled = false;
             }
-            makeSnack.GetComponent<BoxCollider>().enabled = true;
+
         }
-	
-	}
+
+    }
 }
