@@ -53,6 +53,15 @@ public class TextBoxManager : MonoBehaviour {
 				cancelTyping = true;
 			}
 		}
+		if 
+	}
+
+	void OnTriggerEnter(Collider other) {
+		if (other.gameObject.name == "Kid Container") {
+			currentLine = 0;
+			endAtLine = 1;
+			EnableTextBox ();
+		}
 	}
 
 	private IEnumerator TextScroll (string lineOfText) {
@@ -91,4 +100,5 @@ public class TextBoxManager : MonoBehaviour {
 			textLines = (textFile.text.Split ('\n'));
 		}
 	}
+
 }
