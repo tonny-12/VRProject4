@@ -3,8 +3,7 @@ using System.Collections;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class SelectableScript : MonoBehaviour,
-    IPointerEnterHandler, IPointerExitHandler
+public class SelectableScript : MonoBehaviour
 {
 
     Component halo;
@@ -28,7 +27,7 @@ public class SelectableScript : MonoBehaviour,
     }
 
 
-        public void OnPointerEnter(PointerEventData eventData)
+        public void hoverOn()
     {
         if (anim.isAnimated) return;    //don't activate
         halo.GetType().GetProperty("enabled").SetValue(halo, true, null); //SetActive(true);
@@ -43,7 +42,7 @@ public class SelectableScript : MonoBehaviour,
         }
     }
 
-    public void OnPointerExit(PointerEventData eventData)
+    public void hoverOff()
     {
         halo.GetType().GetProperty("enabled").SetValue(halo, false, null);
         selected = false;
