@@ -21,6 +21,7 @@ public class TextBoxManager : MonoBehaviour {
 	public float typeSpeed;
 
     bool beginning = true;
+    public bool waiting = false;
 
 	// Use this for initialization
 	void Start () {
@@ -62,28 +63,33 @@ public class TextBoxManager : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider other) {
-		if (other.gameObject.name == "Kid Container" && other.gameObject.GetComponent<BaseAnimation>().isAnimated == false && beginning) {
+        if ((other.gameObject.name == "Kid Container") && !other.gameObject.GetComponent<BaseAnimation>().isAnimated && beginning) {
             beginning = false;
-			currentLine = 0;
-			endAtLine = 1;
-			EnableTextBox ();
-		} else if (other.gameObject.name == "Obese Teen Container") {
-			currentLine = 6;
-			endAtLine = 7;
+            currentLine = 0;
+            endAtLine = 2;
+            EnableTextBox();
+        } else if ((other.gameObject.name == "Kid Container") && !other.gameObject.GetComponent<BaseAnimation>().isAnimated && waiting)
+        {
+            waiting = false;
+            currentLine = 11;
+            endAtLine = 13;
+            EnableTextBox();
+        } else if (other.gameObject.name == "Obese Teen Container") {
+			currentLine = 20;
+			endAtLine = 20;
 			EnableTextBox ();
 		} else if (other.gameObject.name == "Middleweight Container 1") {
-			currentLine = 8;
-			endAtLine = 9;
+			currentLine = 19;
+			endAtLine = 19;
 			EnableTextBox ();
 		} else if (other.gameObject.name == "Athletic Teen Container") {
-			currentLine = 10;
-			endAtLine = 11;
+			currentLine = 18;
+			endAtLine = 18;
 			EnableTextBox ();
 		}
 	}
 
 	private IEnumerator TextScroll (string lineOfText) {
-        print("COUU");
 		int letter = 0;
 		theText.text = "";
 		isTyping = true;

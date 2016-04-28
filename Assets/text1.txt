@@ -1,7 +1,24 @@
-Son: Hey Mom! I just finished my homework!
-Mom: Great Job! Now lets see what you should get for all your hardwork.
-Mom: Here's your favorite toy!
-Mom: I just made chocolate cake!
+Child: I just finished my homework!
+You: Great job! Now let's see what you should get for all your hard work.
+Pick up either the cake or toy car with x and then bring it to your child.
+You: Here's your favorite toy!
+Child: Wow, thanks!
+You: I've also made a healthy snack, so go eat at the table. I'll come and eat with you.
+Child: Okay.
+You: I just made chocolate cake!
+Child: Wow, thanks!
+You: I'm also made a healthy snack, so go eat at the table. I'll come and eat with you.
+Child: Okay.
+You: What's wrong?
+Child: I don't like these.
+Bring the snacks to the child to make them eat it, or the book to have them read instead.
+You: Alright, go read this book then.
+Child: Yay, thanks for not making me eat those snacks!
+You: Too bad, you have to eat them. They're good for you.
+Child: Aww...
+Child: Hey! I'm feeling good today. Take me to the park? Let's go for a jog.
+Child: You're taking me to the park today? Fine. Let's just walk for a bit.
+Child: Do we have to go to the park today? I'm not feeling well.
 Son: I just got all straight A's!
 Mom: Great Job! Now lets see what you should get for all your hardwork.
 Cake + Snack -> Obese
