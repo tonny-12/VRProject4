@@ -14,6 +14,7 @@ public class TextBoxManager : MonoBehaviour {
 	public bool isActive;
 	public bool stopPlayerMovement;
 	public FirstPersonController player;
+	public SelectableScript choice1;
 
 	private bool isTyping = false;
 	private bool cancelTyping = false;
@@ -53,6 +54,15 @@ public class TextBoxManager : MonoBehaviour {
 				cancelTyping = true;
 			}
 		}
+
+	}
+
+	void OnTriggerEnter(Collider other) {
+		if (other.gameObject.name == "Kid Container") {
+			currentLine = 0;
+			endAtLine = 1;
+			EnableTextBox ();
+		}
 	}
 
 	private IEnumerator TextScroll (string lineOfText) {
@@ -91,4 +101,5 @@ public class TextBoxManager : MonoBehaviour {
 			textLines = (textFile.text.Split ('\n'));
 		}
 	}
+
 }
