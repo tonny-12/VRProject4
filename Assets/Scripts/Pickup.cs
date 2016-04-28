@@ -33,7 +33,7 @@ public class Pickup : MonoBehaviour {
 	}
 
 	void PickupObject(){
-		if(Input.GetButtonDown("Fire1")){
+		if(Input.GetButtonDown("Fire1") || Input.GetButtonDown("PS4_X")){
 			int x = Screen.width / 2;
 			int y = Screen.height / 2;
 
@@ -51,7 +51,7 @@ public class Pickup : MonoBehaviour {
 	}
 
 	void CheckDrop(){
-		if (Input.GetButtonDown("Fire1")){
+		if (Input.GetButtonDown("Fire1") || Input.GetButtonDown("PS4_X")){
 			DropObject ();
 		}
 	}
