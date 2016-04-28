@@ -67,6 +67,8 @@ public class Events : MonoBehaviour {
 			if (givenCake == false) {
 				cake.SetActive (false);
 
+				car.SetActive (false);
+
 				kid.GetComponent<EntryAnimation> ().enabled = !kid.GetComponent<EntryAnimation> ().enabled;
 				kid.GetComponent<KitchenAnimation> ().enabled = !kid.GetComponent<KitchenAnimation> ().enabled;
 
@@ -83,6 +85,8 @@ public class Events : MonoBehaviour {
 		if (carlos.magnitude < 0.4f){
 			if (givenCar == false) {
 				car.SetActive (false);
+
+				cake.SetActive (false);
 
 				kid.GetComponent<EntryAnimation> ().enabled = !kid.GetComponent<EntryAnimation> ().enabled;
 				kid.GetComponent<KitchenAnimation> ().enabled = !kid.GetComponent<KitchenAnimation> ().enabled;
@@ -101,6 +105,8 @@ public class Events : MonoBehaviour {
 		if (snacklos.magnitude < 0.4f){
 			if (givenSnack == false) {
 				snack.SetActive (false);
+
+				book.SetActive (false);
 
 
 				kid.GetComponent<KitchenAnimation> ().enabled = !kid.GetComponent<KitchenAnimation> ().enabled;
@@ -139,6 +145,8 @@ public class Events : MonoBehaviour {
 		if (booklos.magnitude < 0.4f){
 			if (givenBook == false) {
 				book.SetActive (false);
+
+				snack.SetActive (false);
 
 				kid.GetComponent<KitchenAnimation> ().enabled = !kid.GetComponent<KitchenAnimation> ().enabled;
 				kid.GetComponent<ExitAnimation> ().enabled = !kid.GetComponent<ExitAnimation> ().enabled;
