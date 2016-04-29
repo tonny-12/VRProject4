@@ -20,6 +20,7 @@ http://tonny-12.github.io/VRProject4/
 
 ### Social Relevance
 
+Child rearing is an important social topic. Many people will be parents someday, and these parents shape the future generation in how they raise their children. Children themselves are highly impressionable at a young age, and how you are treated when you are young often follows you throughout the rest of your life. 
 
 ### Scientific Data
 
@@ -28,14 +29,13 @@ This project was based on a research paper named ["If you are good you can have 
 
 ### Empathy Evaluation
 
-
 Two people took the Empathy Evaluation questionnaire before and after their experience with this project. In the questionnaire, the topics rotated between animal rights, environmentalism, tuition raise and food rewards, our topic. The table below reflects the averages from the pre-survey, post-survey and the difference between them.
 
 **Empathy Evaluation Results Table**  
 
 Person 1:
 
-| [Topic]                  | [Pre] | [Post] | [Diff] |
+| Topic                    | Pre | Post | Diff |
 |--------------------------|-----|-----|-----|
 | Animal Rights            | 3.3 | 3   | -0.3|
 | Environmentalism         | 5.7 | 5.7 | 0   |
@@ -44,7 +44,7 @@ Person 1:
 
 Person 2:
 
-| [Topic]                  | [Pre] | [Post] | [Diff] |
+| Topic                    | Pre | Post | Diff |
 |--------------------------|-----|-----|-----|
 | Animal Rights            | 2.6 | 2.3 | 0.3 |
 | Environmentalism         | 6   | 5.7 | -0.3|
