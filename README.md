@@ -1,6 +1,5 @@
 # Project4: The Rewards of Parenting
 
-This VR project explores  
 
 ### Motivation
 
@@ -24,7 +23,7 @@ http://tonny-12.github.io/VRProject4/
 
 ### Scientific Data
 
-This project was based on a research paper named ["If you are good you can have a cookie: How memories of childhood food rules link to adult eating behaviors"](https://www.researchgate.net/publication/8679359_If_you_are_good_you_can_have_a_cookie_How_memories_of_childhood_food_rules_link_to_adult_eating_behaviors) by Rebecca M. Puhl and Marlene B. Schwartz of the Department of Psychology, Yale University. This study has shown through self-reported surveys that strict parental food rules, such as rewarding children with food is linked to higher weight and increased risk of binge eating. Similarly, punishing with food, such as forcing children to eat food they dislike, also has some correlation with eating disorders. 
+This project was based on a research paper named ["If you are good you can have a cookie: How memories of childhood food rules link to adult eating behaviors"](https://www.researchgate.net/publication/8679359_If_you_are_good_you_can_have_a_cookie_How_memories_of_childhood_food_rules_link_to_adult_eating_behaviors) by Rebecca M. Puhl and Marlene B. Schwartz of the Department of Psychology, Yale University. This study has shown through self-reported surveys that strict parental food rules, such as rewarding children with food is linked to higher weight and increased risk of binge eating. Similarly, punishing with food, such as forcing children to eat food they dislike, also has some correlation with eating disorders.
 
 
 ### Empathy Evaluation
