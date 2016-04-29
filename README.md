@@ -1,7 +1,7 @@
 # Project4: The Rewards of Parenting
 
 ### Source Code and APK
-[Android APK and Source Code]()
+[Android APK and Source Code](https://www.dropbox.com/s/zp5hpt0bel552qh/VRProject4.zip?dl=0)
 
 ### Authors
 [Virada Long](https://github.com/ViradaLong)  
@@ -9,7 +9,7 @@
 [Tonny Xie](https://github.com/tonny-12)  
 
 ### YouTube Video
-[Demo]()  
+[Demo](https://youtu.be/uczOzXVApc0)  
 
 ### Website
 http://tonny-12.github.io/VRProject4/
