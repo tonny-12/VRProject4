@@ -1,5 +1,10 @@
 # Project4: The Rewards of Parenting
 
+This VR project explores  
+
+### Motivation
+
+
 ### Source Code and APK
 [Android APK and Source Code](https://www.dropbox.com/s/zp5hpt0bel552qh/VRProject4.zip?dl=0)
 
@@ -15,15 +20,45 @@
 http://tonny-12.github.io/VRProject4/
 
 ### Social Relevance
-  
+
 
 ### Scientific Data
-  
+
+This project was based on a research paper named ["If you are good you can have a cookie: How memories of childhood food rules link to adult eating behaviors"](https://www.researchgate.net/publication/8679359_If_you_are_good_you_can_have_a_cookie_How_memories_of_childhood_food_rules_link_to_adult_eating_behaviors) by Rebecca M. Puhl and Marlene B. Schwartz of the Department of Psychology, Yale University. This study has shown through self-reported surveys that strict parental food rules, such as rewarding children with food is linked to higher weight and increased risk of binge eating. Similarly, punishing with food, such as forcing children to eat food they dislike, also has some correlation with eating disorders. 
+
+
+### Empathy Evaluation
+
+
+Two people took the Empathy Evaluation questionnaire before and after their experience with this project. In the questionnaire, the topics rotated between animal rights, environmentalism, tuition raise and food rewards, our topic. The table below reflects the averages from the pre-survey, post-survey and the difference between them.
+
+**Empathy Evaluation Results Table**  
+
+Person 1:
+
+| [Topic]                  | [Pre] | [Post] | [Diff] |
+|--------------------------|-----|-----|-----|
+| Animal Rights            | 3.3 | 3   | -0.3|
+| Environmentalism         | 5.7 | 5.7 | 0   |
+| Tuition raise            | 2.7 | 3.3 | 0.6 |
+| Food Rewards             | 4   | 5   | 1   |
+
+Person 2:
+
+| [Topic]                  | [Pre] | [Post] | [Diff] |
+|--------------------------|-----|-----|-----|
+| Animal Rights            | 2.6 | 2.3 | 0.3 |
+| Environmentalism         | 6   | 5.7 | -0.3|
+| Tuition raise            | 1.7 | 2   | 0.3 |
+| Food Rewards             | 2.3 | 4.7 | 2.4 |
+
+The simulator sickness questionnaire yielded relatively good results with all the control results having a difference of less than one. The second person had a larger change in opinion than the first, but the topic of food rewards had the greatest change between the pre and post surveys for both people that took it.
+
 
 <!--### Team Responsibilities-->
-  
 
-### Assests & Resources  
+
+### Assets & Resources  
 [TV Furniture](https://www.assetstore.unity3d.com/en/#!/content/60122) by Enozone   
 [Flatscreen TV](https://www.assetstore.unity3d.com/en/#!/content/9721) by Rutger Klunder  
 [Wall TVset](https://www.assetstore.unity3d.com/en/#!/content/8468) by 3d.rina
@@ -40,7 +75,7 @@ http://tonny-12.github.io/VRProject4/
 [Animations](https://www.mixamo.com/) by mixamo  
 [Dialogue Box](https://www.youtube.com/watch?v=ehmBIP5sj0M) by gamesplusjames
 
-  
+
 
 <!--
 # VR-Project3: Mount Everest
