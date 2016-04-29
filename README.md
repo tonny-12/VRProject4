@@ -1,8 +1,13 @@
 # Project4: The Rewards of Parenting
 
 
-### Motivation
+### Motivation & Explanation  
+Presented with the challenge of creating an accelerated future in VR, the group decided to do a project on one of the most important aspects of human life. The future generation. Parents are, without a doubt, holds the most significant impact on the life of a child. The future generation will be the new leaders and new innovators who change the world for the better. In order for them to grow and mature, as such, eating habits from their childhood is quite important in the development and health of thier body.
 
+In this experience, the user will play the role of a child's parent. They will be able to pick from two items in each of the two choices which will affect the child's eating behaviour in the accelerated future of 5 years. The two decisions the user is presented with are:  
+1. Rewarding the child with food or playtime. (Cake/Toy)  
+2. Freedom for the child to eat or not eat food he dislikes. (Snack/Book)  
+Both of these decisions will determine on how healthy the child is. See Scientific Data.
 
 ### Source Code and APK
 [Android APK and Source Code](https://www.dropbox.com/s/zp5hpt0bel552qh/VRProject4.zip?dl=0)
