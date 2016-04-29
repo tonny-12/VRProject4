@@ -20,10 +20,26 @@ http://tonny-12.github.io/VRProject4/
 ### Scientific Data
   
 
-### Team Responsibilities
+<!--### Team Responsibilities-->
   
 
-### Assests & Resources
+### Assests & Resources  
+[TV Furniture](https://www.assetstore.unity3d.com/en/#!/content/60122) by Enozone   
+[Flatscreen TV](https://www.assetstore.unity3d.com/en/#!/content/9721) by Rutger Klunder  
+[Wall TVset](https://www.assetstore.unity3d.com/en/#!/content/8468) by 3d.rina
+[Props for the Classroom](https://www.assetstore.unity3d.com/en/#!/content/5977) by VR  
+[Door](http://www.turbosquid.com/FullPreview/Index.cfm/ID/426247) by ahmet hamdi  
+[3D Bakery Object](https://www.assetstore.unity3d.com/en/#!/content/17167) by Layer Lab  
+[Cute Little Cartoonish Fruits](https://www.assetstore.unity3d.com/en/#!/content/48848) by Game Slyce
+[Dish&Tray](https://www.assetstore.unity3d.com/en/#!/content/5333) by Yuji Nagata  
+[Chairs and Sofas Pack](https://www.assetstore.unity3d.com/en/#!/content/6411) by A World For Us
+[Cartoon Car - Free](https://www.assetstore.unity3d.com/en/#!/content/38743) by DooLabs (Marco Siino)  
+[Free Furniture Set](https://www.assetstore.unity3d.com/en/#!/content/26678) by Lef  
+[Japanese-Style Series: Low Table Pack](https://www.assetstore.unity3d.com/en/#!/content/39077) by MSTK Studio
+[Models](https://charactergenerator.autodesk.com/) by Autodesk  
+[Animations](https://www.mixamo.com/) by mixamo  
+[Dialogue Box](https://www.youtube.com/watch?v=ehmBIP5sj0M) by gamesplusjames
+
   
 
 <!--
